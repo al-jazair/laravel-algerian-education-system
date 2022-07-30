@@ -12,8 +12,8 @@ class AlgerianEducatifSystemSeeder extends Seeder
 
     public function run(): void
     {
-        $cycles = require __DIR__ . './../../arrays/cycles.php';
-        $class_types = require __DIR__ . './../../arrays/class_types.php';
+        $cycles = require __DIR__.'./../../arrays/cycles.php';
+        $class_types = require __DIR__.'./../../arrays/class_types.php';
 
         DB::table('cycles')->insert($cycles);
         DB::table('class_types')->insert($class_types);
