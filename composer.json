@@ -1,17 +1,21 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "elaboratecode/laravel-algerian-education-system",
+    "description": "This is my package laravel-algerian-education-system",
     "keywords": [
-        ":vendor_name",
         "laravel",
-        ":package_slug"
+        "migration",
+        "seeder",
+        "algerian-education-system",
+        "education-system-structure",
+        "cycles",
+        "classrooms"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/elaboratecode/laravel-algerian-education-system",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "medilies",
+            "email": "medilies.contact@gmail.com",
             "role": "Developer"
         }
     ],
@@ -30,18 +34,17 @@
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-deprecation-rules": "^1.0",
         "phpstan/phpstan-phpunit": "^1.0",
-        "phpunit/phpunit": "^9.5",
-        "spatie/laravel-ray": "^1.26"
+        "phpunit/phpunit": "^9.5"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "ElaborateCode\\AlgerianEducationSystem\\": "src",
+            "ElaborateCode\\AlgerianEducationSystem\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "ElaborateCode\\AlgerianEducationSystem\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -51,16 +54,18 @@
         "format": "vendor/bin/pint"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "ElaborateCode\\AlgerianEducationSystem\\AlgerianEducationSystemServiceProvider"
             ],
-            "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
-            }
+            "aliases": {}
         }
     },
     "minimum-stability": "dev",
