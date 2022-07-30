@@ -1,6 +1,6 @@
 {
-    "name": "elaboratecode/laravel-algerian-education-system",
-    "description": "This is my package laravel-algerian-education-system",
+    "name": "elaborate-code/laravel-algerian-education-system",
+    "description": "Tables migrations seeded with the structure of the algerian education system for Laravel apps",
     "keywords": [
         "laravel",
         "migration",
@@ -10,7 +10,7 @@
         "cycles",
         "classrooms"
     ],
-    "homepage": "https://github.com/elaboratecode/laravel-algerian-education-system",
+    "homepage": "https://github.com/elaborate-code/laravel-algerian-education-system",
     "license": "MIT",
     "authors": [
         {

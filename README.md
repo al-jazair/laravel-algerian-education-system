@@ -1,18 +1,20 @@
-# This is my package laravel-algerian-education-system
+# Laravel algerian education system structure
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/elaboratecode/laravel-algerian-education-system.svg?style=flat-square)](https://packagist.org/packages/elaboratecode/laravel-algerian-education-system)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/elaboratecode/laravel-algerian-education-system/run-tests?label=tests)](https://github.com/elaboratecode/laravel-algerian-education-system/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/elaboratecode/laravel-algerian-education-system/Fix%20PHP%20code%20style%20issues?label=code%20style)](https://github.com/elaboratecode/laravel-algerian-education-system/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/elaboratecode/laravel-algerian-education-system.svg?style=flat-square)](https://packagist.org/packages/elaboratecode/laravel-algerian-education-system)
+[![Packagist Version](https://img.shields.io/packagist/v/elaborate-code/laravel-algerian-education-system?style=for-the-badge)](https://packagist.org/packages/elaborate-code/laravel-algerian-education-system)
+[![Packagist Downloads (custom server)](https://img.shields.io/packagist/dt/elaborate-code/laravel-algerian-education-system?style=for-the-badge)](https://packagist.org/packages/elaborate-code/laravel-algerian-education-system)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/elaborate-code/laravel-algerian-education-system/run-tests?label=Tests&style=for-the-badge)](https://github.com/elaborate-code/laravel-algerian-education-system/actions/workflows/run-tests.yml)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/elaborate-code/laravel-algerian-education-system/Fix%20PHP%20code%20style%20issues?label=Code%20Style&style=for-the-badge)](https://github.com/elaborate-code/laravel-algerian-education-system/actions/workflows/fix-php-code-style-issues.yml)
 
-...
+![banner](https://banners.beyondco.de/Algerian%20education%20system%20structure.png?theme=dark&packageManager=composer+require&packageName=elaborate-code%2Flaravel-algerian-education-system&pattern=deathStar&style=style_1&description=Tables+migrations+seeded+with+the+structure+of+the+algerian+education+system+for+Laravel+apps&md=1&showWatermark=0&fontSize=100px&images=database)
+
+Tables migrations seeded with the structure of the algerian education system for Laravel apps
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require elaboratecode/laravel-algerian-education-system
+composer require elaborate-code/laravel-algerian-education-system
 ```
 
 You can publish and run the migrations with:
