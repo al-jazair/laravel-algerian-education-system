@@ -39,7 +39,7 @@
     "autoload": {
         "psr-4": {
             "ElaborateCode\\AlgerianEducationSystem\\": "src",
-            "ElaborateCode\\AlgerianEducationSystem\\Database\\Factories\\": "database/factories"
+            "ElaborateCode\\AlgerianEducationSystem\\Database\\Seeders\\": "database/seeders"
         }
     },
     "autoload-dev": {

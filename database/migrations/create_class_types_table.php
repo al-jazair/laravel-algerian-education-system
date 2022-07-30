@@ -8,10 +8,13 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('algerian_education_system', function (Blueprint $table) {
+        Schema::create('class_types', function (Blueprint $table) {
             $table->id();
 
-            // add fields
+            $table->string('name', 50)->index();
+            $table->string('cycle_id', 20);
+            $table->unsignedSmallInteger('level');
+            $table->string('alias', 10);
 
             $table->timestamps();
         });
