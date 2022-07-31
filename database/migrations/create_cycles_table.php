@@ -10,8 +10,6 @@ return new class extends Migration
     {
         Schema::create('cycles', function (Blueprint $table) {
             $table->string('id', 20)->primary();
-
-            $table->timestamps();
         });
     }
 };

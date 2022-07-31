@@ -12,8 +12,8 @@ class TestCase extends Orchestra
     {
         parent::setUp();
 
-        $this->loadMigrationsFrom(__DIR__.'./../database/migrations/create_cycles_table.php');
-        $this->loadMigrationsFrom(__DIR__.'./../database/migrations/create_class_types_table.php');
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations/create_cycles_table.php');
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations/create_class_types_table.php');
 
         $this->seed(AlgerianEducatifSystemSeeder::class);
     }
