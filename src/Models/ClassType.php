@@ -3,6 +3,8 @@
 namespace ElaborateCode\AlgerianEducationSystem\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class ClassType extends Model
 {
@@ -13,8 +15,18 @@ class ClassType extends Model
     | Relationships
     |-------------------------------------
     */
-    public function cycle()
+    public function cycle(): BelongsTo
     {
         return $this->belongsTo(Cycle::class);
+    }
+
+    public function previousClassType(): BelongsTo
+    {
+        return $this->belongsTo(self::class, 'previous_class_type_id', 'id');
+    }
+
+    public function nextClassTypes(): HasMany
+    {
+        return $this->hasMany(self::class, 'previous_class_type_id', 'id');
     }
 }
