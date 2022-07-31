@@ -4,5 +4,6 @@ All contributions are welcome :)
 
 ## TODO
 
-- Arabic seeder.
-- Add detailed seeder for `technique mathematique`.
+- Class types arabic names.
+- Add detailed seeder modifier for `technique mathematique`.
+- Use enums for seeding and make them available for user.

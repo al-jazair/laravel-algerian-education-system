@@ -12,8 +12,9 @@ return new class extends Migration
             $table->id();
 
             $table->unsignedBigInteger('previous_class_type_id')->nullable();
-            $table->string('name', 48)->index();
-            $table->string('alias', 8)->index();
+            $table->string('name', 48)->unique();
+            $table->string('alias', 8)->unique();
+            $table->string('arabic_name', 48)->index();
             $table->string('cycle_id', 16);
             $table->unsignedSmallInteger('level');
 

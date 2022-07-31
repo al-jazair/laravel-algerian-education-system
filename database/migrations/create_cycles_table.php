@@ -10,6 +10,7 @@ return new class extends Migration
     {
         Schema::create('cycles', function (Blueprint $table) {
             $table->string('id', 16)->primary();
+            $table->string('arabic_name', 8)->unique();
         });
     }
 };
