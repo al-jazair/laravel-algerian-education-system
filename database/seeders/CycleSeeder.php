@@ -4,17 +4,16 @@ namespace ElaborateCode\AlgerianEducationSystem\Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
-class AlgerianEducatifSystemSeeder extends Seeder
+class CycleSeeder extends Seeder
 {
     use WithoutModelEvents;
 
     public function run(): void
     {
-        $this->call([
-            CycleSeeder::class,
-            ClassTypeSeeder::class,
-            // MergePrescolaireIntoPrimaireCycleSeeder::class,
-        ]);
+        $cycles = require __DIR__.'/../../arrays/cycles.php';
+
+        DB::table('cycles')->insert($cycles);
     }
 }
