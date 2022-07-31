@@ -17,6 +17,6 @@ class AlgerianEducationSystemServiceProvider extends PackageServiceProvider
         $package
             ->name('algerian-education-system')
             ->hasConfigFile()
-            ->hasMigration('create_algerian_education_system_table');
+            ->hasMigrations('create_cycles_table', 'create_class_types_table');
     }
 }

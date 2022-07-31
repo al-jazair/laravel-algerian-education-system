@@ -11,16 +11,16 @@ return new class extends Migration
         Schema::create('class_types', function (Blueprint $table) {
             $table->id();
 
-            $table->string('cycle_id', 20);
-            $table->string('name', 50)->index();
-            $table->string('alias', 10)->index();
+            $table->unsignedBigInteger('previous_class_type_id')->nullable();
+            $table->string('name', 48)->index();
+            $table->string('alias', 8)->index();
+            $table->string('cycle_id', 16);
             $table->unsignedSmallInteger('level');
-            $table->unsignedBigInteger('ex_class_type_id')->nullable();
 
             $table->timestamps();
 
             $table->foreign('cycle_id')->references('id')->on('cycles');
-            $table->foreign('ex_class_type_id')->references('id')->on('class_types');
+            $table->foreign('previous_class_type_id')->references('id')->on('class_types');
         });
     }
 };

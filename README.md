@@ -42,16 +42,6 @@ return [
 ```php
 ```
 
-## References
-
-All the data is gathered exclusively from https://www.education.gov.dz/fr/systeme-educatif-algerien/
-
-Also check https://www.education.gov.dz/%d8%a7%d9%84%d9%86%d8%b8%d8%a7%d9%85-%d8%a7%d9%84%d8%aa%d8%b1%d8%a8%d9%88%d9%8a-%d8%a7%d9%84%d8%ac%d8%b2%d8%a7%d8%a6%d8%b1%d9%8a/
-
-![Structuration-du-système-éducatif](https://education.gov.dz/wp-content/uploads/2014/12/Structuration-du-syst%C3%A8me-%C3%A9ducatif.jpg)
-
-![RESTRUCTURATION-DU-POST-OBLIGATOIRE](https://education.gov.dz/wp-content/uploads/2015/01/RESTRUCTURATION-DU-POST-OBLIGATOIRE.jpg)
-
 ## Testing
 
 ```bash

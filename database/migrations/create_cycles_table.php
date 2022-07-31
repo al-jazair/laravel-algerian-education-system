@@ -9,7 +9,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('cycles', function (Blueprint $table) {
-            $table->string('id', 20)->primary();
+            $table->string('id', 16)->primary();
         });
     }
 };
