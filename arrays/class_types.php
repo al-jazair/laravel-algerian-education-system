@@ -148,7 +148,7 @@ return [
         'name' => '1re AS TC lettres',
         'alias' => '1as-l',
         'arabic_name' => '',
-        'level' => $i, // 1
+        'level' => $i, // 11
         'previous_class_type_id' => 10,
         'previous_level' => $i - 1,
         'created_at' => $now,
