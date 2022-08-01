@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('arabic_name', 48)->index();
             $table->string('cycle_id', 16);
             $table->unsignedSmallInteger('level');
+            $table->unsignedSmallInteger('previous_level')->nullable();
 
             $table->timestamps();
 

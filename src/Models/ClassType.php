@@ -17,7 +17,7 @@ class ClassType extends Model
     */
     public function cycle(): BelongsTo
     {
-        return $this->belongsTo(Cycle::class);
+        return $this->belongsTo(Cycle::class, 'cycle_id', 'id');
     }
 
     public function previousClassType(): BelongsTo
@@ -28,5 +28,15 @@ class ClassType extends Model
     public function nextClassTypes(): HasMany
     {
         return $this->hasMany(self::class, 'previous_class_type_id', 'id');
+    }
+
+    public function previousLevelClassTypes()
+    {
+        return $this->hasMany(self::class, 'level', 'previous_level');
+    }
+
+    public function nextLevelClassTypes()
+    {
+        return $this->hasMany(self::class, 'previous_level', 'level');
     }
 }

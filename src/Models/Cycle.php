@@ -21,6 +21,6 @@ class Cycle extends Model
     */
     public function classTypes()
     {
-        return $this->hasMany(ClassType::class);
+        return $this->hasMany(ClassType::class, 'cycle_id', 'id');
     }
 }
