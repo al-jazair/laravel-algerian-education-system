@@ -12,10 +12,10 @@ class MergePrescolaireIntoPrimaireCycleSeeder extends Seeder
 
     public function run(): void
     {
-        DB::table('class_types')
+        DB::table(config('algerian-education-system.class_types_table_name') ?? 'class_types')
             ->where('cycle_id', 'pre-scolaire')
             ->update(['cycle_id' => 'primaire']);
 
-        DB::table('cycles')->delete('pre-scolaire');
+        DB::table(config('algerian-education-system.cycles_table_name') ?? 'cycles')->delete('pre-scolaire');
     }
 }

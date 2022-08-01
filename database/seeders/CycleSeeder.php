@@ -14,6 +14,6 @@ class CycleSeeder extends Seeder
     {
         $cycles = require __DIR__.'/../../arrays/cycles.php';
 
-        DB::table('cycles')->insert($cycles);
+        DB::table(config('algerian-education-system.cycles_table_name') ?? 'cycles')->insert($cycles);
     }
 }

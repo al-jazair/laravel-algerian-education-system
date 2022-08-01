@@ -14,6 +14,6 @@ class ClassTypeSeeder extends Seeder
     {
         $class_types = require __DIR__.'/../../arrays/class_types.php';
 
-        DB::table('class_types')->insert($class_types);
+        DB::table(config('algerian-education-system.class_types_table_name') ?? 'class_types')->insert($class_types);
     }
 }

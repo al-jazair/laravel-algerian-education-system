@@ -8,7 +8,7 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('class_types', function (Blueprint $table) {
+        Schema::create(config('algerian-education-system.class_types_table_name') ?? 'class_types', function (Blueprint $table) {
             $table->id();
 
             $table->unsignedBigInteger('previous_class_type_id')->nullable();
@@ -21,8 +21,9 @@ return new class extends Migration
 
             $table->timestamps();
 
-            $table->foreign('cycle_id')->references('id')->on('cycles');
-            $table->foreign('previous_class_type_id')->references('id')->on('class_types');
+            $table->foreign('cycle_id')->references('id')->on(config('algerian-education-system.cycles_table_name') ?? 'cycles');
+            $table->foreign('previous_class_type_id')->references('id')->on(config('algerian-education-system.class_types_table_name') ?? 'class_types');
+            $table->foreign('previous_level')->references('level')->on(config('algerian-education-system.class_types_table_name') ?? 'class_types');
         });
     }
 };
