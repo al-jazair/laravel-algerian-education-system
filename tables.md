@@ -2,36 +2,49 @@
 
 ![database](db.png)
 
+
+## cycles
+
+`create_cycles_table` migration + `ClassTypeSeeder` or `AlgerianEducatifSystemSeeder`
+
+| id             | arabic_name |
+| -------------- | ----------- |
+| "pre-scolaire" | "تحضيري"    |
+| "primaire"     | "ابتدائي"    |
+| "moyen"        | "متوسط"    |
+| "secondaire"   | "ثانوي"    |
+
 ## class_types
 
-`create_class_types_table` migration + `ClassTypeSeeder`
+`create_class_types_table` migration + `ClassTypeSeeder` or `AlgerianEducatifSystemSeeder`
 
-| id  | cycle_id       | name                                | alias    | level | previous_class_type_id | created_at | updated_at |
-| --- | -------------- | ----------------------------------- | -------- | ----- | ---------------------- | ---------- | ---------- |
-| 1   | "pre-scolaire" | "pre-scolaire"                      | "pre"    | 1     | NULL                   |            |            |
-| 2   | "primaire"     | "1re AP"                            | "1ap"    | 2     | 1                      |            |            |
-| 3   | "primaire"     | "2e AP"                             | "2ap"    | 3     | 2                      |            |            |
-| 4   | "primaire"     | "3e AP"                             | "3ap"    | 4     | 3                      |            |            |
-| 5   | "primaire"     | "4e AP"                             | "4ap"    | 5     | 4                      |            |            |
-| 6   | "primaire"     | "5e AP"                             | "5ap"    | 6     | 5                      |            |            |
-| 7   | "moyen"        | "1re AM"                            | "1am"    | 7     | 6                      |            |            |
-| 8   | "moyen"        | "2e AM"                             | "2am"    | 8     | 7                      |            |            |
-| 9   | "moyen"        | "3e AM"                             | "3am"    | 9     | 8                      |            |            |
-| 10  | "moyen"        | "4e AM"                             | "4am"    | 10    | 9                      |            |            |
-| 11  | "secondaire"   | "1re AS TC sciences et technologie" | "1as-st" | 11    | 10                     |            |            |
-| 12  | "secondaire"   | "1re AS TC lettres"                 | "1as-l"  | 11    | 10                     |            |            |
-| 13  | "secondaire"   | "2e AS sciences experimentales"     | "2as-s"  | 12    | 11                     |            |            |
-| 14  | "secondaire"   | "2e AS gestion et economie"         | "2as-ge" | 12    | 11                     |            |            |
-| 15  | "secondaire"   | "2e AS math"                        | "2as-m"  | 12    | 11                     |            |            |
-| 16  | "secondaire"   | "2e AS technique mathematique"      | "2as-tm" | 12    | 11                     |            |            |
-| 17  | "secondaire"   | "2e AS langues etrangères"          | "2as-le" | 12    | 12                     |            |            |
-| 18  | "secondaire"   | "2e AS lettres - philosophie"       | "2as-lp" | 12    | 12                     |            |            |
-| 19  | "secondaire"   | "3e AS sciences experimentales"     | "3as-s"  | 13    | 13                     |            |            |
-| 20  | "secondaire"   | "3e AS gestion et economie"         | "3as-ge" | 13    | 14                     |            |            |
-| 21  | "secondaire"   | "3e AS math"                        | "3as-m"  | 13    | 15                     |            |            |
-| 22  | "secondaire"   | "3e AS technique mathematique"      | "3as-tm" | 13    | 16                     |            |            |
-| 23  | "secondaire"   | "3e AS langues etrangères"          | "3as-le" | 13    | 17                     |            |            |
-| 24  | "secondaire"   | "3e AS lettres - philosophie"       | "3as-lp" | 13    | 18                     |            |            |
+| id  | previous_class_type_id | name                                | alias    | arabic_name | cycle_id       | level | previous_level | created_at | updated_at |
+| --- | ---------------------- | ----------------------------------- | -------- | ----------- | -------------- | ----- | -------------- | ---------- | ---------- |
+| 1   | NULL                   | "pre-scolaire"                      | "pre"    |             | "pre-scolaire" | 1     | NULL           |            |            |
+| 2   | 1                      | "1re AP"                            | "1ap"    |             | "primaire"     | 2     | 1              |            |            |
+| 3   | 2                      | "2e AP"                             | "2ap"    |             | "primaire"     | 3     | 2              |            |            |
+| 4   | 3                      | "3e AP"                             | "3ap"    |             | "primaire"     | 4     | 3              |            |            |
+| 5   | 4                      | "4e AP"                             | "4ap"    |             | "primaire"     | 5     | 4              |            |            |
+| 6   | 5                      | "5e AP"                             | "5ap"    |             | "primaire"     | 6     | 5              |            |            |
+| 7   | 6                      | "1re AM"                            | "1am"    |             | "moyen"        | 7     | 6              |            |            |
+| 8   | 7                      | "2e AM"                             | "2am"    |             | "moyen"        | 8     | 7              |            |            |
+| 9   | 8                      | "3e AM"                             | "3am"    |             | "moyen"        | 9     | 8              |            |            |
+| 10  | 9                      | "4e AM"                             | "4am"    |             | "moyen"        | 10    | 9              |            |            |
+| 11  | 10                     | "1re AS TC sciences et technologie" | "1as-st" |             | "secondaire"   | 11    | 10             |            |            |
+| 12  | 10                     | "1re AS TC lettres"                 | "1as-l"  |             | "secondaire"   | 11    | 10             |            |            |
+| 13  | 11                     | "2e AS sciences experimentales"     | "2as-s"  |             | "secondaire"   | 12    | 11             |            |            |
+| 14  | 11                     | "2e AS gestion et economie"         | "2as-ge" |             | "secondaire"   | 12    | 11             |            |            |
+| 15  | 11                     | "2e AS math"                        | "2as-m"  |             | "secondaire"   | 12    | 11             |            |            |
+| 16  | 11                     | "2e AS technique mathematique"      | "2as-tm" |             | "secondaire"   | 12    | 11             |            |            |
+| 17  | 12                     | "2e AS langues etrangères"          | "2as-le" |             | "secondaire"   | 12    | 11             |            |            |
+| 18  | 12                     | "2e AS lettres - philosophie"       | "2as-lp" |             | "secondaire"   | 12    | 11             |            |            |
+| 19  | 13                     | "3e AS sciences experimentales"     | "3as-s"  |             | "secondaire"   | 13    | 12             |            |            |
+| 20  | 14                     | "3e AS gestion et economie"         | "3as-ge" |             | "secondaire"   | 13    | 12             |            |            |
+| 21  | 15                     | "3e AS math"                        | "3as-m"  |             | "secondaire"   | 13    | 12             |            |            |
+| 22  | 16                     | "3e AS technique mathematique"      | "3as-tm" |             | "secondaire"   | 13    | 12             |            |            |
+| 23  | 17                     | "3e AS langues etrangères"          | "3as-le" |             | "secondaire"   | 13    | 12             |            |            |
+| 24  | 18                     | "3e AS lettres - philosophie"       | "3as-lp" |             | "secondaire"   | 13    | 12             |            |            |
+
 
 ## References
 

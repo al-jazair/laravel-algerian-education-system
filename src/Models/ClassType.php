@@ -10,6 +10,13 @@ class ClassType extends Model
 {
     protected $guarded = ['id'];
 
+    public function __construct(array $attributes = [])
+    {
+        parent::__construct($attributes);
+
+        $this->table = config('algerian-education-system.class_types_table_name') ?? 'class_types';
+    }
+
     /*
     |-------------------------------------
     | Relationships
@@ -30,12 +37,12 @@ class ClassType extends Model
         return $this->hasMany(self::class, 'previous_class_type_id', 'id');
     }
 
-    public function previousLevelClassTypes()
+    public function previousLevelClassTypes(): HasMany
     {
         return $this->hasMany(self::class, 'level', 'previous_level');
     }
 
-    public function nextLevelClassTypes()
+    public function nextLevelClassTypes(): HasMany
     {
         return $this->hasMany(self::class, 'previous_level', 'level');
     }
