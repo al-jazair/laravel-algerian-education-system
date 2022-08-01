@@ -7,22 +7,26 @@
 
 ![banner](https://banners.beyondco.de/Algerian%20education%20system%20structure.png?theme=dark&packageManager=composer+require&packageName=elaborate-code%2Flaravel-algerian-education-system&pattern=architect&style=style_1&description=Tables+migrations+seeded+with+the+structure+of+the+algerian+education+system+for+Laravel+apps&md=1&showWatermark=0&fontSize=100px&images=database)
 
-Tables migrations seeded with the structure of the algerian education system for Laravel apps
+If you are building a **Learning Management System** or a **School Management System** and targeting the Algerian market, this package is perfect to kick start your project by providing migrations and seeders according the **Algerian education system** structure. see [tables.md](tables.md)
 
 ## Installation
 
-You can install the package via composer:
+Install the package via composer:
 
 ```bash
 composer require elaborate-code/laravel-algerian-education-system
 ```
 
-You can publish and run the migrations with:
+Publish and run the migrations:
 
 ```bash
 php artisan vendor:publish --tag="algerian-education-system-migrations"
 php artisan migrate
 ```
+
+You may need to rename the migration to something like `2014_10_12_200000_create_cycles_table.php`, `2014_10_12_200000_create_class_types_table.php` to make them run automatically with the first migrations.
+
+### Publishing config file [Optional]
 
 You can publish the config file with:
 
@@ -34,12 +38,37 @@ This is the contents of the published config file:
 
 ```php
 return [
+    'cycles_table_name' => null, // defaults to cycles
+    'class_types_table_name' => null, // defaults to class_types
 ];
 ```
 
+That allows you to rename the `tables` names before running the migrations.
+
 ## Usage
 
+After publishing and running the migrations, add the seeders to the called seeders list:
+
+- `ElaborateCode\AlgerianEducationSystem\Database\Seeders\AlgerianEducationSystemSeeder` is the main seeder that calls:
+  - `ElaborateCode\AlgerianEducationSystem\Database\Seeders\CycleSeeder`
+  - `ElaborateCode\AlgerianEducationSystem\Database\Seeders\ClassTypeSeeder`
+- `ElaborateCode\AlgerianEducationSystem\Database\Seeders\MergePrescolaireIntoPrimaireCycleSeeder` as the name states it deletes the `pre-scolaire` cycle row, and edits the `pre-scolaire` class type to belong to `primaire` cycle
+
 ```php
+// Database\Seeders\DatabaseSeeder
+public function run()
+{
+    $this->call([
+        ElaborateCode\AlgerianEducationSystem\Database\Seeders\AlgerianEducationSystemSeeder::class,
+        // ElaborateCode\AlgerianEducationSystem\Database\Seeders\MergePrescolaireIntoPrimaireCycleSeeder::class,
+    ]);
+}
+```
+
+Or call it directly from the command line:
+
+```php
+php .\artisan db:seed --class=ElaborateCode\AlgerianEducationSystem\Database\Seeders\AlgerianEducationSystemSeeder
 ```
 
 ## Testing

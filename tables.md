@@ -5,7 +5,7 @@
 
 ## cycles
 
-`create_cycles_table` migration + `ClassTypeSeeder` or `AlgerianEducatifSystemSeeder`
+`create_cycles_table` migration + `CycleSeeder` or `AlgerianEducationSystemSeeder`
 
 | id             | arabic_name |
 | -------------- | ----------- |
@@ -16,7 +16,7 @@
 
 ## class_types
 
-`create_class_types_table` migration + `ClassTypeSeeder` or `AlgerianEducatifSystemSeeder`
+`create_class_types_table` migration + `ClassTypeSeeder` or `AlgerianEducationSystemSeeder`
 
 | id  | previous_class_type_id | name                                | alias    | arabic_name | cycle_id       | level | previous_level | created_at | updated_at |
 | --- | ---------------------- | ----------------------------------- | -------- | ----------- | -------------- | ----- | -------------- | ---------- | ---------- |
@@ -36,13 +36,13 @@
 | 14  | 11                     | "2e AS gestion et economie"         | "2as-ge" |             | "secondaire"   | 12    | 11             |            |            |
 | 15  | 11                     | "2e AS math"                        | "2as-m"  |             | "secondaire"   | 12    | 11             |            |            |
 | 16  | 11                     | "2e AS technique mathematique"      | "2as-tm" |             | "secondaire"   | 12    | 11             |            |            |
-| 17  | 12                     | "2e AS langues etrangères"          | "2as-le" |             | "secondaire"   | 12    | 11             |            |            |
+| 17  | 12                     | "2e AS langues etrangeres"          | "2as-le" |             | "secondaire"   | 12    | 11             |            |            |
 | 18  | 12                     | "2e AS lettres - philosophie"       | "2as-lp" |             | "secondaire"   | 12    | 11             |            |            |
 | 19  | 13                     | "3e AS sciences experimentales"     | "3as-s"  |             | "secondaire"   | 13    | 12             |            |            |
 | 20  | 14                     | "3e AS gestion et economie"         | "3as-ge" |             | "secondaire"   | 13    | 12             |            |            |
 | 21  | 15                     | "3e AS math"                        | "3as-m"  |             | "secondaire"   | 13    | 12             |            |            |
 | 22  | 16                     | "3e AS technique mathematique"      | "3as-tm" |             | "secondaire"   | 13    | 12             |            |            |
-| 23  | 17                     | "3e AS langues etrangères"          | "3as-le" |             | "secondaire"   | 13    | 12             |            |            |
+| 23  | 17                     | "3e AS langues etrangeres"          | "3as-le" |             | "secondaire"   | 13    | 12             |            |            |
 | 24  | 18                     | "3e AS lettres - philosophie"       | "3as-lp" |             | "secondaire"   | 13    | 12             |            |            |
 
 

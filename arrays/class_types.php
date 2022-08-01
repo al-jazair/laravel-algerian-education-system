@@ -206,7 +206,7 @@ return [
     [
         'id' => 17,
         'cycle_id' => 'secondaire',
-        'name' => '2e AS langues etrangères',
+        'name' => '2e AS langues etrangeres',
         'alias' => '2as-le',
         'arabic_name' => '',
         'level' => $i, // 12
@@ -279,7 +279,7 @@ return [
     [
         'id' => 23,
         'cycle_id' => 'secondaire',
-        'name' => '3e AS langues etrangères',
+        'name' => '3e AS langues etrangeres',
         'alias' => '3as-le',
         'arabic_name' => '',
         'level' => $i, // 13

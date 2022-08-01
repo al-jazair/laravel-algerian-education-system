@@ -5,7 +5,7 @@ namespace ElaborateCode\AlgerianEducationSystem\Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class AlgerianEducatifSystemSeeder extends Seeder
+class AlgerianEducationSystemSeeder extends Seeder
 {
     use WithoutModelEvents;
 

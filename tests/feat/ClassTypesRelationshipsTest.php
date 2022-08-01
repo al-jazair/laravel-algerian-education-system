@@ -1,10 +1,10 @@
 <?php
 
-use ElaborateCode\AlgerianEducationSystem\Database\Seeders\AlgerianEducatifSystemSeeder;
+use ElaborateCode\AlgerianEducationSystem\Database\Seeders\AlgerianEducationSystemSeeder;
 use ElaborateCode\AlgerianEducationSystem\Models\ClassType;
 
 beforeEach(function () {
-    $this->seed(AlgerianEducatifSystemSeeder::class);
+    $this->seed(AlgerianEducationSystemSeeder::class);
 });
 
 it('has 4am as previous class to 1as-st', function () {
