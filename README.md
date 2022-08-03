@@ -7,7 +7,7 @@
 
 ![banner](https://banners.beyondco.de/Algerian%20education%20system%20structure.png?theme=dark&packageManager=composer+require&packageName=elaborate-code%2Flaravel-algerian-education-system&pattern=architect&style=style_1&description=Tables+migrations+seeded+with+the+structure+of+the+algerian+education+system+for+Laravel+apps&md=1&showWatermark=0&fontSize=100px&images=database)
 
-If you are building a **Learning Management System** or a **School Management System** and targeting the Algerian market, this package is perfect to kick start your project by providing migrations and seeders according the **Algerian education system** structure. see [tables.md](tables.md)
+If you are building a **Learning Management System** or a **School Management System** and targeting the Algerian market, this package is perfect to kick start your project by providing migrations and seeders according to the **Algerian education system** structure. see [tables.md](tables.md)
 
 ## Installation
 
@@ -47,12 +47,14 @@ That allows you to rename the `tables` names before running the migrations.
 
 ## Usage
 
+### Seeders
+
 After publishing and running the migrations, add the seeders to the called seeders list:
 
-- `ElaborateCode\AlgerianEducationSystem\Database\Seeders\AlgerianEducationSystemSeeder` is the main seeder that calls:
-  - `ElaborateCode\AlgerianEducationSystem\Database\Seeders\CycleSeeder`
-  - `ElaborateCode\AlgerianEducationSystem\Database\Seeders\ClassTypeSeeder`
-- `ElaborateCode\AlgerianEducationSystem\Database\Seeders\MergePrescolaireIntoPrimaireCycleSeeder` as the name states it deletes the `pre-scolaire` cycle row, and edits the `pre-scolaire` class type to belong to `primaire` cycle
+- `AlgerianEducationSystemSeeder` is the main seeder that calls:
+  - `CycleSeeder`
+  - `ClassTypeSeeder`
+- `MergePrescolaireIntoPrimaireCycleSeeder` as the name states it deletes the `pre-scolaire` cycle row, and edits the `pre-scolaire` class type to belong to `primaire` cycle
 
 ```php
 // Database\Seeders\DatabaseSeeder
@@ -70,6 +72,17 @@ Or call it directly from the command line:
 ```php
 php .\artisan db:seed --class=ElaborateCode\AlgerianEducationSystem\Database\Seeders\AlgerianEducationSystemSeeder
 ```
+
+### Models
+
+The models `ElaborateCode\AlgerianEducationSystem\Models\Cycle` and `ElaborateCode\AlgerianEducationSystem\Models\ClassType` give you access to a set of relationships. so either use them or extend them.
+
+- `Cycle::classTypes(): HasMany`
+- `ClassType::cycle(): BelongsTo`
+- `ClassType::previousClassType(): BelongsTo`
+- `ClassType::nextClassTypes(): HasMany`
+- `ClassType::previousLevelClassTypes(): HasMany`
+- `ClassType::nextLevelClassTypes(): HasMany`
 
 ## Testing
 
